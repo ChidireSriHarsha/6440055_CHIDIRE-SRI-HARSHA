@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Jazz Night",
+    "date": "2025-06-22",
+    "category": "Music",
+    "seats": 5
+  },
+  {
+    "id": 2,
+    "name": "Pottery Workshop",
+    "date": "2025-06-25",
+    "category": "Art",
+    "seats": 10
+  },
+  {
+    "id": 3,
+    "name": "Vegan Cooking Class",
+    "date": "2025-07-02",
+    "category": "Cooking",
+    "seats": 0
+  },
+  {
+    "id": 4,
+    "name": "Rock Concert",
+    "date": "2025-07-10",
+    "category": "Music",
+    "seats": 12
+  }
+]

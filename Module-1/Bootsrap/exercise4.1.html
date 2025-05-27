@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 4.1 – Two-Column Layout</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      padding-top: 2rem;
+    }
+    .sidebar {
+      background: #6c5ce7;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      min-height: 100%;
+    }
+    .content {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #2d3436;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="section-title">🧭 Two-Column Layout (Sidebar + Content)</h2>
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <div class="sidebar">
+          <h5>Sidebar</h5>
+          <ul class="list-unstyled">
+            <li>🏠 Dashboard</li>
+            <li>📄 Documents</li>
+            <li>⚙️ Settings</li>
+            <li>📞 Contact</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="col-md-9">
+        <div class="content">
+          <h4>Main Content Area</h4>
+          <p>This area takes up <strong>9 columns</strong> of the grid. On mobile devices, both sections will stack vertically.</p>
+          <p>You can use this layout for admin dashboards, blogs with side menus, profile pages, etc.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="text-center mt-4">
+      <a href="exercise3.2.html" class="btn btn-outline-dark me-2">⬅ Back to 3.2</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

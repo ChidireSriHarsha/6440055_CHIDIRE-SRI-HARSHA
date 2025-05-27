@@ -1,0 +1,17 @@
+/* styles.css */
+
+/* Header styles */
+h2 {
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 16px;
+    color: #34495e;
+    line-height: 1.5;
+}
+
+/* You can add more reusable styles here */

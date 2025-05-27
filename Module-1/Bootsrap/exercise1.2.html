@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap 5 - Local Setup</title>
+
+  <!-- Local Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: #f8f9fa;
+    }
+    .hero {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .features {
+      padding: 3rem 0;
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: #0d6efd;
+    }
+    .card-custom {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Bootstrap 5 with Local Files</h1>
+      <p class="lead">Using downloaded Bootstrap in a sample HTML page</p>
+    </div>
+  </section>
+
+  <!-- Feature Cards Section -->
+  <section class="features">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="card card-custom p-4">
+            <div class="feature-icon mb-3">🎨</div>
+            <h5>Prebuilt Styles</h5>
+            <p>Leverage Bootstrap’s rich styles and components without writing complex CSS.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom p-4">
+            <div class="feature-icon mb-3">⚙️</div>
+            <h5>Fast Setup</h5>
+            <p>Install once and reuse locally for all projects—no dependency on CDN.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom p-4">
+            <div class="feature-icon mb-3">📁</div>
+            <h5>Customizable</h5>
+            <p>Fully editable source files with Sass for advanced customization options.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

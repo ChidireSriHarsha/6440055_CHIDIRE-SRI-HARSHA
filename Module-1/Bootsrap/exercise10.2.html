@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 10.2 – Animated Tabs & Pills</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #ffe0e9, #fad0c4);
+      padding-top: 2rem;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2d3436;
+    }
+    .card-custom {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .nav-tabs .nav-link,
+    .nav-pills .nav-link {
+      font-weight: 500;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-tabs .nav-link.active {
+      background-color: #6c5ce7;
+      color: white;
+    }
+    .nav-pills .nav-link.active {
+      background-color: #00cec9;
+      color: white;
+    }
+    .tab-content {
+      margin-top: 1rem;
+    }
+    .tab-pane {
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="section-title">🧩 Animated Tabs & Pills Navigation</h2>
+
+    <div class="card-custom">
+      <ul class="nav nav-tabs justify-content-center mb-3" id="tabExample" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">
+            🏠 Home
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">
+            👤 Profile
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+            📞 Contact
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="tabExampleContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel">
+          <p>🏠 Welcome to the <strong>Home</strong> tab! This content is part of the nav-tabs section styled beautifully.</p>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel">
+          <p>👤 This is your <strong>Profile</strong> tab. Display personal settings or profile-related data here.</p>
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel">
+          <p>📞 This is the <strong>Contact</strong> tab. Add your contact information or a feedback form here.</p>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <ul class="nav nav-pills justify-content-center mb-3" id="pillExample" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pill1-tab" data-bs-toggle="pill" data-bs-target="#pill1" type="button" role="tab">
+            💡 Pill 1
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pill2-tab" data-bs-toggle="pill" data-bs-target="#pill2" type="button" role="tab">
+            🚀 Pill 2
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="pillExampleContent">
+        <div class="tab-pane fade show active" id="pill1" role="tabpanel">
+          <p>💡 <strong>Pill Tab 1:</strong> Rounded navigation with nav-pills using Bootstrap classes.</p>
+        </div>
+        <div class="tab-pane fade" id="pill2" role="tabpanel">
+          <p>🚀 <strong>Pill Tab 2:</strong> Stylish transitions and cleaner UI for tab switches.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="text-center mt-4">
+      <a href="exercise10.1.html" class="btn btn-outline-dark me-2">⬅ Back to 10.1</a>
+      <a href="exercise11.1.html" class="btn btn-outline-primary">➡ Go to 11.1</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

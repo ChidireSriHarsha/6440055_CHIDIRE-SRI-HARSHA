@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 8.1 – Registration Form</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #d4fc79, #96e6a1);
+      padding-top: 2rem;
+    }
+    .form-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="section-title">📝 Registration Form</h2>
+    <div class="form-card">
+      <form>
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+        </div>
+
+        <div class="mb-3">
+          <label for="emailAddress" class="form-label">Email address</label>
+          <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter a strong password">
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="termsCheck">
+          <label class="form-check-label" for="termsCheck">I agree to the terms and conditions</label>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+
+    <!-- Navigation -->
+    <div class="text-center mt-4">
+      <a href="exercise7.2.html" class="btn btn-outline-dark me-2">⬅ Back to 7.2</a>
+      <a href="exercise8.2.html" class="btn btn-outline-primary">➡ Go to 8.2</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

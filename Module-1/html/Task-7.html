@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Video Invite</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    #videoReadyMsg {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+
+    video {
+      width: 100%;
+      max-width: 720px;
+      border: 3px solid #444;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    form {
+      margin-top: 40px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 18px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎉 You're Invited to Our Local Community Event!</h2>
+
+  <!-- Video Invite -->
+  <video id="promoVideo" controls oncanplay="showReadyMessage()">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div id="videoReadyMsg"></div>
+
+  <!-- RSVP Form -->
+  <form id="inviteForm">
+    <h3>RSVP Form</h3>
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="comment">Your Message:</label>
+    <textarea id="comment" name="comment" rows="4" placeholder="Say something..." required></textarea>
+
+    <button type="submit">Submit RSVP</button>
+  </form>
+
+  <script>
+    let isFormSubmitted = false;
+
+    // Display message when video can play
+    function showReadyMessage() {
+      document.getElementById('videoReadyMsg').textContent = '🎬 Video is ready to play!';
+    }
+
+    // Prevent user from leaving without submitting the form
+    window.onbeforeunload = function (e) {
+      if (!isFormSubmitted) {
+        const message = 'You have not submitted your RSVP yet. Are you sure you want to leave?';
+        e.preventDefault();
+        e.returnValue = message;
+        return message;
+      }
+    };
+
+    // Handle form submission
+    document.getElementById('inviteForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      isFormSubmitted = true;
+      alert('✅ Thank you for your RSVP!');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

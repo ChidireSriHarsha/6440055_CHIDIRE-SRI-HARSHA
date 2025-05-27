@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Nearby Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #333;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📍 Locate Nearby Events</h2>
+  <button onclick="findNearbyEvents()">Find Nearby Events</button>
+
+  <div id="output">Your coordinates will appear here...</div>
+
+  <script>
+    function findNearbyEvents() {
+      const output = document.getElementById("output");
+
+      if (!navigator.geolocation) {
+        output.textContent = "Geolocation is not supported by your browser.";
+        return;
+      }
+
+      // High accuracy options
+      const options = {
+        enableHighAccuracy: true,
+        timeout: 10000, // 10 seconds
+        maximumAge: 0
+      };
+
+      function success(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        output.innerHTML = `
+          ✅ Your location:<br>
+          Latitude: <strong>${lat}</strong><br>
+          Longitude: <strong>${lon}</strong>
+        `;
+      }
+
+      function error(err) {
+        switch (err.code) {
+          case err.PERMISSION_DENIED:
+            output.textContent = "❌ Permission to access location was denied.";
+            break;
+          case err.POSITION_UNAVAILABLE:
+            output.textContent = "❌ Location information is unavailable.";
+            break;
+          case err.TIMEOUT:
+            output.textContent = "⏳ Request to get location timed out.";
+            break;
+          default:
+            output.textContent = "❌ An unknown error occurred.";
+        }
+      }
+
+      navigator.geolocation.getCurrentPosition(success, error, options);
+    }
+  </script>
+
+</body>
+</html>

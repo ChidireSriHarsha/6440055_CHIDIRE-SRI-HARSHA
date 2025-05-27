@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 11.2 – Media Object Layout</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      padding-top: 2rem;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2d3436;
+    }
+    .media-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+    .media img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin-right: 1rem;
+    }
+    .media-body h5 {
+      font-weight: 600;
+      color: #0984e3;
+    }
+    .media-body p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="section-title">📰 Media Object Layout</h2>
+
+    <div class="media-card">
+      <div class="media d-flex align-items-start">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Profile Image">
+        <div class="media-body">
+          <h5 class="mt-0">Emily Watson</h5>
+          <p>
+            Emily is a content strategist and storyteller with a knack for crafting compelling digital narratives. Her work bridges brand voice, audience engagement, and sharp editing skills.
+          </p>
+          <p>
+            She collaborates with product and marketing teams to shape content experiences that inform, inspire, and drive action.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="text-center mt-4">
+      <a href="exercise11.1.html" class="btn btn-outline-dark me-2">⬅ Back to 11.1</a>
+      <a href="exercise12.1.html" class="btn btn-outline-primary">➡ Go to 12.1</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

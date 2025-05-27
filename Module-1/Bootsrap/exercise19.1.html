@@ -1,0 +1,76 @@
+
+<!--
+Project: Bootstrap 5 + Sass Setup (Exercise 19.1)
+
+🛠 Steps in code:
+
+1. Terminal Setup:
+   mkdir bootstrap-sass-project && cd bootstrap-sass-project
+   npm init -y
+   npm install bootstrap
+   npm install -g sass
+
+2. File Structure:
+   - index.html
+   - scss/custom.scss
+   - css/custom.css (compiled)
+
+3. SCSS File (scss/custom.scss):
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+// Optional overrides: $primary: #ff6b6b;
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+4. Compile:
+   sass --watch scss:css
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 19.1 – Bootstrap with Sass</title>
+  <link rel="stylesheet" href="css/custom.css"> <!-- output from SCSS -->
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #ffffff, #f0f4f7);
+      padding: 3rem 1rem;
+    }
+    .card {
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border: none;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card p-4">
+    <h1 class="text-primary text-center">🚀 Bootstrap 5 with Sass</h1>
+    <p class="lead text-center">You're now using a custom-compiled Bootstrap build with Sass!</p>
+    <p>This setup gives you full control over Bootstrap’s variables, mixins, and components.</p>
+    <ul>
+      <li>Custom SCSS file located at <code>scss/custom.scss</code></li>
+      <li>Compiled output at <code>css/custom.css</code></li>
+      <li>Use <code>sass --watch</code> for live updates</li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="exercise18.2.html" class="btn btn-outline-secondary me-2">⬅ Back to 18.2</a>
+    <a href="exercise19.2.html" class="btn btn-outline-primary">➡ Go to 19.2</a>
+    <p class="mt-3"><small>&copy; 2025 Bootstrap Sass Setup</small></p>
+  </footer>
+
+</body>
+</html>

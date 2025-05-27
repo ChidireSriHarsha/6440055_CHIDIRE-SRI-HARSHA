@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 6.2 – Enhanced Card Layout</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      padding-top: 2rem;
+    }
+    .section-title {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+    .card-custom {
+      border-radius: 1.5rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      background: white;
+      transition: transform 0.3s ease;
+    }
+    .card-custom:hover {
+      transform: scale(1.02);
+    }
+    .card-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .card-text {
+      color: #636e72;
+      margin-bottom: 0.5rem;
+    }
+    .btn-buy {
+      background: linear-gradient(to right, #00b09b, #96c93d);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+    .btn-buy:hover {
+      background: linear-gradient(to right, #96c93d, #00b09b);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="section-title">🃏 Beautiful Flex Card with CTA</h2>
+
+    <div class="card-custom">
+      <div class="card-content">
+        <div>
+          <h5 class="card-title">Premium Headphones 🎧</h5>
+          <p class="card-text">Crystal clear sound, sleek design. Experience the audio revolution today.</p>
+          <small class="text-muted">In stock · Ships in 24h</small>
+        </div>
+        <a href="#buy" class="btn btn-buy">Buy Now</a>
+      </div>
+    </div>
+
+    <div id="buy" class="mt-5 text-center">
+      <h4>🎉 Thank you for clicking Buy Now!</h4>
+      <p>Proceed to checkout or continue browsing.</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="text-center mt-4">
+      <a href="exercise6.1.html" class="btn btn-outline-dark me-2">⬅ Back to 6.1</a>
+      <a href="exercise7.1.html" class="btn btn-outline-primary">➡ Go to 7.1</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

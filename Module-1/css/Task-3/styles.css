@@ -1,0 +1,42 @@
+/* =========================
+   Selectors Playground Styles
+   ========================= */
+
+/* Universal selector to reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element selector: style all <h2> elements */
+h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* ID selector: style banner header */
+#mainHeader {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Class selector: event card container style */
+.eventCard {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+/* Grouping selector: apply styles to both h3 and p */
+h3, p {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+}

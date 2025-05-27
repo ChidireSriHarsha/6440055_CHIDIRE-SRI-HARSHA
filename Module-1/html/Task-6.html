@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      background: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1.5px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    #phoneError {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+    #feeDisplay {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #1e90ff;
+    }
+    #submitBtn {
+      margin-top: 20px;
+      padding: 10px 16px;
+      font-size: 1rem;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #submitBtn:hover {
+      background-color: #0f78d4;
+    }
+    #confirmation {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #d0f0c0;
+      border: 1px solid #3c763d;
+      border-radius: 6px;
+      font-weight: bold;
+      display: none;
+    }
+    #feedbackImage {
+      margin-top: 20px;
+      width: 200px;
+      height: 120px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      object-fit: cover;
+    }
+    #feedbackImage.enlarged {
+      transform: scale(2);
+      z-index: 10;
+      position: relative;
+    }
+    #charCount {
+      font-size: 0.9rem;
+      margin-top: 6px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Event Feedback</h2>
+  <form id="feedbackForm">
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="phone" placeholder="e.g. 123-456-7890" onblur="validatePhone()" required />
+    <div id="phoneError"></div>
+
+    <label for="eventSelect">Choose Event</label>
+    <select id="eventSelect" name="eventSelect" onchange="showFee()" required>
+      <option value="" disabled selected>Select an event</option>
+      <option value="cleanUp" data-fee="Free">Community Clean-up (Free)</option>
+      <option value="farmersMarket" data-fee="$10">Farmers Market ($10)</option>
+      <option value="festival" data-fee="$25">Summer Festival ($25)</option>
+      <option value="charityRun" data-fee="$15">Charity Fun Run ($15)</option>
+    </select>
+    <div id="feeDisplay"></div>
+
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" name="feedback" rows="5" placeholder="Share your thoughts..." onkeyup="countChars()" required></textarea>
+    <div id="charCount">Characters: 0</div>
+
+    <button type="button" id="submitBtn" onclick="submitFeedback()">Submit Feedback</button>
+  </form>
+
+  <img
+    src="community_event.jpg"
+    alt="Community Event"
+    id="feedbackImage"
+    ondblclick="toggleImageSize()"
+    title="Double-click to enlarge"
+  />
+
+  <div id="confirmation"></div>
+
+  <script>
+    function validatePhone() {
+      const phoneInput = document.getElementById('phone');
+      const errorDiv = document.getElementById('phoneError');
+      // Simple US phone pattern: 123-456-7890 or 1234567890
+      const phonePattern = /^(\d{3}-\d{3}-\d{4}|\d{10})$/;
+
+      if (!phonePattern.test(phoneInput.value.trim())) {
+        errorDiv.textContent = 'Please enter a valid phone number (e.g., 123-456-7890).';
+        phoneInput.focus();
+      } else {
+        errorDiv.textContent = '';
+      }
+    }
+
+    function showFee() {
+      const select = document.getElementById('eventSelect');
+      const feeDisplay = document.getElementById('feeDisplay');
+      const selectedOption = select.options[select.selectedIndex];
+      const fee = selectedOption.getAttribute('data-fee') || '';
+      feeDisplay.textContent = fee ? `Event Fee: ${fee}` : '';
+    }
+
+    function submitFeedback() {
+      // Check phone validation first
+      const phoneError = document.getElementById('phoneError').textContent;
+      if (phoneError) {
+        alert('Please fix errors before submitting.');
+        return;
+      }
+
+      const form = document.getElementById('feedbackForm');
+      if (!form.checkValidity()) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+
+      const confirmation = document.getElementById('confirmation');
+      confirmation.textContent = 'Thank you for your feedback! We appreciate your input.';
+      confirmation.style.display = 'block';
+
+      form.reset();
+      document.getElementById('feeDisplay').textContent = '';
+      document.getElementById('charCount').textContent = 'Characters: 0';
+    }
+
+    function toggleImageSize() {
+      const img = document.getElementById('feedbackImage');
+      img.classList.toggle('enlarged');
+    }
+
+    function countChars() {
+      const feedback = document.getElementById('feedback');
+      const charCount = document.getElementById('charCount');
+      charCount.textContent = `Characters: ${feedback.value.length}`;
+    }
+  </script>
+
+</body>
+</html>

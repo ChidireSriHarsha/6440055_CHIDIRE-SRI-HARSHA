@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Event Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    #events {
+      max-width: 800px;
+      margin: auto;
+    }
+    .event {
+      background: #fff;
+      padding: 15px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .event h3 {
+      margin: 0 0 10px;
+      color: #34495e;
+    }
+    .event p {
+      margin: 5px 0;
+    }
+    .event button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .event button:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+    #stats {
+      margin-top: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Local Community Events</h1>
+  <div id="events"></div>
+  <div id="stats"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

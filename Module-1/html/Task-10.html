@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Debugging Practice: Local Community Event Portal</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f0f8ff;
+  }
+  .container {
+    max-width: 600px;
+    background-color: #e0f7fa; /* Intentional soft blue background */
+    padding: 30px;
+    border-radius: 10px;
+    /* Deliberate layout issue: too much padding on the right */
+    padding-right: 100px;
+  }
+  h2 {
+    color: #00796b;
+  }
+  button {
+    background-color: #00796b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #004d40;
+  }
+  #message {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  /* Intentionally missing styling for .error class to spot in Inspect */
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Debugging Practice: User Registration</h2>
+  <label for="username">Enter your name:</label><br />
+  <input type="text" id="username" placeholder="Your name here" autofocus /><br /><br />
+  <button onclick="submitForm()">Submit</button>
+  <p id="message"></p>
+</div>
+
+<script>
+  function submitForm() {
+    const userInput = document.getElementById('username').value;
+    console.log('User input:', userInput);
+
+    // Deliberate bug: typo in 'lenght' (should be length)
+    if (userInput.lenght === 0) {
+      console.error('No name entered!');
+      document.getElementById('message').textContent = 'Error: Please enter your name.';
+      document.getElementById('message').className = 'error';
+      return;
+    }
+
+    // Corrected logic for length, set breakpoint here to watch userInput and message
+    if (userInput.length > 0) {
+      document.getElementById('message').textContent = `Welcome, ${userInput}!`;
+      document.getElementById('message').className = '';
+      console.log('Welcome message displayed');
+    }
+  }
+</script>
+
+</body>
+</html>

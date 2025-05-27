@@ -1,0 +1,53 @@
+/* =========================
+   Typography Enhancements
+   ========================= */
+
+/* Base font setup using imported Google Font */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header font styles */
+#mainHeader h1 {
+    font-size: 36px;
+    font-weight: 700; /* Bold */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Section title styling */
+.intro h2 {
+    font-size: 28px;
+    font-weight: 500; /* Medium */
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling for intro */
+.intro p {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #555;
+}
+
+/* Event card title */
+.eventCard h3 {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Description paragraph with enhanced readability */
+.description {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    text-align: justify;
+    color: #444;
+}

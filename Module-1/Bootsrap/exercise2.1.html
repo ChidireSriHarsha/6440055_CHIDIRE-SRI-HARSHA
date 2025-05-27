@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bootstrap Structure Explained</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background: #f2f6fc;
+      padding-top: 4rem;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #0d6efd;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .card-custom {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    .icon {
+      font-size: 2rem;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="section-title">📂 Bootstrap Directory Structure</h1>
+
+    <div class="row g-4">
+      <!-- CSS Folder -->
+      <div class="col-md-4">
+        <div class="card card-custom p-4">
+          <div class="icon mb-3">🎨</div>
+          <h5>CSS Folder</h5>
+          <p>This contains compiled CSS files such as:
+            <code>bootstrap.css</code> and <code>bootstrap.min.css</code>.
+            These are the styles you include in your HTML for layout and design.
+          </p>
+        </div>
+      </div>
+
+      <!-- JS Folder -->
+      <div class="col-md-4">
+        <div class="card card-custom p-4">
+          <div class="icon mb-3">⚙️</div>
+          <h5>JS Folder</h5>
+          <p>Includes the JavaScript functionality of Bootstrap components. 
+            Use <code>bootstrap.bundle.min.js</code> to enable modals, tooltips, and more (includes Popper.js).
+          </p>
+        </div>
+      </div>
+
+      <!-- Icons Folder -->
+      <div class="col-md-4">
+        <div class="card card-custom p-4">
+          <div class="icon mb-3">🔤</div>
+          <h5>Icons Folder</h5>
+          <p>If you're using Bootstrap Icons, this folder contains SVG icon files. 
+            You can include them in your pages or use them as inline SVGs or fonts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

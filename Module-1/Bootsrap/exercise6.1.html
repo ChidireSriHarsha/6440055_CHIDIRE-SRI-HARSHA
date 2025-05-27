@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 6.1 – Responsive Flex Navbar (Functional)</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #d4fc79, #96e6a1);
+      padding-top: 2rem;
+    }
+    .navbar-custom {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    .nav-link {
+      font-weight: 500;
+      color: #2d3436;
+      padding: 0.5rem 1rem;
+    }
+    .nav-link:hover {
+      color: #0984e3;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #00b894;
+    }
+    .content-section {
+      background: white;
+      margin-top: 2rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="section-title">🧭 Responsive Navbar with Functional Links</h2>
+
+    <nav class="navbar-custom d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div id="home" class="content-section">
+      <h3>🏠 Home</h3>
+      <p>Welcome to our responsive website using Bootstrap flex utilities. This is the Home section.</p>
+    </div>
+
+    <div id="about" class="content-section">
+      <h3>📘 About</h3>
+      <p>We are a creative web team using the best practices in responsive design. Learn more about us here.</p>
+    </div>
+
+    <div id="services" class="content-section">
+      <h3>🛠 Services</h3>
+      <p>We offer web development, UI/UX design, and frontend optimization using Bootstrap and modern tools.</p>
+    </div>
+
+    <div id="contact" class="content-section">
+      <h3>📞 Contact</h3>
+      <p>Feel free to reach out to us via email, phone, or through our social platforms.</p>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="exercise5.2.html" class="btn btn-outline-dark me-2">⬅ Back to 5.2</a>
+      <a href="exercise6.2.html" class="btn btn-outline-primary">➡ Go to 6.2</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Event Portal - Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      font-size: 1.1rem;
+      background-color: #457b9d;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1d3557;
+    }
+    .error-message {
+      color: #e63946;
+      font-size: 0.85rem;
+      height: 18px;
+      margin-top: 4px;
+      display: block;
+    }
+    .invalid {
+      border-color: #e63946;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Register for a Community Event</h1>
+
+  <form id="registrationForm" novalidate>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+    <small class="error-message" id="nameError"></small>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+    <small class="error-message" id="emailError"></small>
+
+    <label for="eventSelect">Select Event:</label>
+    <select id="eventSelect" name="eventSelect" required>
+      <option value="">--Please choose an event--</option>
+      <!-- Event options will be dynamically added here -->
+    </select>
+    <small class="error-message" id="eventError"></small>
+
+    <button type="submit">Submit Registration</button>
+  </form>
+
+  <script src="main.js"></script>
+</body>
+</html>

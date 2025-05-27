@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Events Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fbfd;
+      margin: 0;
+      padding: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #0b3d91;
+      margin-bottom: 30px;
+    }
+    #spinner {
+      display: none;
+      margin: 20px auto;
+      border: 6px solid #dcdcdc;
+      border-top: 6px solid #0b3d91;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+    #eventContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .event-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .event-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #0b3d91;
+    }
+    .event-details {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .error {
+      color: #d9534f;
+      text-align: center;
+      font-weight: 600;
+    }
+    .empty {
+      text-align: center;
+      color: #888;
+      font-style: italic;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Community Events Portal</h1>
+
+  <div id="spinner"></div>
+  <div id="eventContainer"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

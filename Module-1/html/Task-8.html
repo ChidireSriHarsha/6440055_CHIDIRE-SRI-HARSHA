@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Preferences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    select, input, button {
+      margin-top: 5px;
+      padding: 8px;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #clearBtn {
+      background-color: #dc3545;
+      color: white;
+      margin-top: 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #clearBtn:hover {
+      background-color: #b02a37;
+    }
+
+    h2 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎯 Save Your Event Preferences</h2>
+
+  <form id="preferenceForm">
+    <label for="eventType">Select Your Preferred Event Type:</label>
+    <select id="eventType" name="eventType">
+      <option value="">-- Choose an Event --</option>
+      <option value="Music">Music</option>
+      <option value="Art">Art</option>
+      <option value="Tech">Tech</option>
+      <option value="Sports">Sports</option>
+    </select>
+
+    <button type="submit">Save Preference</button>
+    <button type="button" id="clearBtn">Clear Preferences</button>
+  </form>
+
+  <script>
+    const select = document.getElementById('eventType');
+    const form = document.getElementById('preferenceForm');
+    const clearBtn = document.getElementById('clearBtn');
+
+    // Load saved preference on page load
+    window.onload = function () {
+      const savedEvent = localStorage.getItem('preferredEvent');
+      if (savedEvent) {
+        select.value = savedEvent;
+      }
+      sessionStorage.setItem('lastVisited', new Date().toLocaleString());
+    };
+
+    // Save preference to localStorage
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const selected = select.value;
+      if (selected) {
+        localStorage.setItem('preferredEvent', selected);
+        alert(`✅ Preference for "${selected}" saved.`);
+      } else {
+        alert("⚠️ Please select an event type.");
+      }
+    });
+
+    // Clear preferences from both localStorage and sessionStorage
+    clearBtn.addEventListener('click', function () {
+      localStorage.removeItem('preferredEvent');
+      sessionStorage.clear();
+      select.value = "";
+      alert("🗑️ Preferences cleared.");
+    });
+  </script>
+
+</body>
+</html>

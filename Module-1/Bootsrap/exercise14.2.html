@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 14.2 – Interactive Responsive Sidebar</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: #f1f2f6;
+      padding-top: 2rem;
+    }
+    .section-title {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+    .sidebar {
+      background-color: #2d3436;
+      color: white;
+      padding: 2rem 1rem;
+      height: 100%;
+      border-radius: 0.75rem;
+    }
+    .sidebar h5 {
+      margin-bottom: 1.5rem;
+    }
+    .sidebar a {
+      display: block;
+      color: #dfe6e9;
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="section-title">📚 Interactive Sidebar</h2>
+
+    <div class="row">
+      <div class="col-md-4 d-none d-md-block">
+        <div class="sidebar">
+          <h5>Sidebar Menu</h5>
+          <a onclick="showContent('dashboard')">🏠 Dashboard</a>
+          <a onclick="showContent('projects')">📁 Projects</a>
+          <a onclick="showContent('team')">👥 Team</a>
+          <a onclick="showContent('reports')">📊 Reports</a>
+        </div>
+      </div>
+      <div class="col-md-8 col-12">
+        <div class="content" id="mainContent">
+          <h4>Welcome!</h4>
+          <p>Select a menu item from the sidebar to see more information here.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="text-center mt-5">
+      <a href="exercise14.1.html" class="btn btn-outline-dark me-2">⬅ Back to 14.1</a>
+      <a href="exercise15.1.html" class="btn btn-outline-primary">➡ Go to 15.1</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showContent(section) {
+      const content = {
+        dashboard: "<h4>🏠 Dashboard</h4><p>This is your dashboard overview with key metrics and updates.</p>",
+        projects: "<h4>📁 Projects</h4><p>Manage and view all your ongoing and completed projects here.</p>",
+        team: "<h4>👥 Team</h4><p>Meet your team, assign roles, and collaborate efficiently.</p>",
+        reports: "<h4>📊 Reports</h4><p>Access detailed analytics and reports to track progress.</p>"
+      };
+      document.getElementById("mainContent").innerHTML = content[section];
+    }
+  </script>
+</body>
+</html>

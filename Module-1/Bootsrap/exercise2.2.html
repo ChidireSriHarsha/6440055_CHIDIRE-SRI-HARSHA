@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 2.2 – Bootstrap Plugins</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #ffe29f, #ffa99f, #ff719a);
+      padding: 2rem 0;
+      color: #2c3e50;
+    }
+    .section {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+    .section h1 {
+      text-align: center;
+      color: #8e44ad;
+      margin-bottom: 1rem;
+    }
+    .section .lead {
+      text-align: center;
+      color: #6c3483;
+      margin-bottom: 2rem;
+    }
+    .btn-glow {
+      background: linear-gradient(to right, #ff6f91, #ff9671);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 25px;
+      transition: transform 0.3s ease;
+    }
+    .btn-glow:hover {
+      transform: scale(1.05);
+    }
+    .modal-header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+    .accordion-button {
+      background: #ff6f91;
+      color: white;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #ff9671;
+    }
+    .btn-outline-colorful {
+      border: 2px solid #f39c12;
+      color: #f39c12;
+    }
+    .btn-outline-colorful:hover {
+      background: #f39c12;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h1>🌈 Bootstrap Plugins in Color</h1>
+    <p class="lead">Experience vibrant UI with working plugins like Modal, Tooltip, Accordion & Alert</p>
+
+    <!-- Tooltip Button -->
+    <div class="text-center mb-4">
+      <button class="btn btn-glow" data-bs-toggle="tooltip" data-bs-placement="top" title="🎯 Tooltips are easy with Bootstrap!">Hover for Tooltip</button>
+    </div>
+
+    <!-- Alert Trigger -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-colorful" onclick="showSuccess()">✨ Show Success Alert</button>
+    </div>
+    <div id="alertPlaceholder" class="text-center mb-4"></div>
+
+    <!-- Modal Trigger -->
+    <div class="text-center mb-4">
+      <button class="btn btn-glow" data-bs-toggle="modal" data-bs-target="#infoModal">
+        💡 Learn About Bootstrap Bundle
+      </button>
+    </div>
+
+    <!-- Modal Content -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">Bootstrap Bundle Explained</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <p><strong>bootstrap.bundle.min.js</strong> includes everything you need:</p>
+            <ul class="list-unstyled">
+              <li>✅ Modals</li>
+              <li>✅ Tooltips</li>
+              <li>✅ Accordions</li>
+              <li>✅ Dropdowns</li>
+              <li>✅ Popper.js built-in</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion -->
+    <div class="accordion my-4" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            📌 Why Use the Bundle?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Using the Bootstrap bundle simplifies your setup by combining all necessary JavaScript and Popper.js in one file.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Button -->
+    <div class="text-center">
+      <a href="exercise3.1.html">
+        <button class="btn btn-outline-colorful mt-3">➡ Go to Exercise 3.1</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+
+    function showSuccess() {
+      const alertPlaceholder = document.getElementById('alertPlaceholder');
+      alertPlaceholder.innerHTML = `
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          ✅ Success! Bootstrap JavaScript is working perfectly.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>

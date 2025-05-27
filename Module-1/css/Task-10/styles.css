@@ -1,0 +1,140 @@
+/* Import Font */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Header Section */
+.site-header {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  padding: 2vh 5vw;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.navbar {
+  margin-top: 10px;
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1520975918318-62e4c8c8c7e5?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* Main Section */
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5vh 5vw;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+.site-footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 2vh;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-content {
+    align-items: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 2vh;
+  }
+
+  .hero h2 {
+    font-size: 6vw;
+  }
+
+  .hero p {
+    font-size: 4vw;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+
+  .site-header h1 {
+    font-size: 6vw;
+  }
+}

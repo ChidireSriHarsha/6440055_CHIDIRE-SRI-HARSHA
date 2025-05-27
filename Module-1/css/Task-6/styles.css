@@ -1,0 +1,53 @@
+/* =========================
+   Link and List Styling
+   ========================= */
+
+/* Navigation Menu Styling */
+.navMenu {
+    list-style-type: none;      /* Remove bullets */
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.navMenu li {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+/* Link styling with pseudo-classes */
+.navMenu a:link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navMenu a:visited {
+    color: #663399;  /* Purple for visited links */
+}
+
+.navMenu a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+.navMenu a:active {
+    color: #cc0000;
+}
+
+/* Event list styling */
+.eventList {
+    list-style-type: square;         /* Custom bullet type */
+    list-style-position: inside;     /* Bullet inside content */
+    margin: 20px 40px;
+    padding: 10px;
+}
+
+.eventList li {
+    padding: 5px 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+}

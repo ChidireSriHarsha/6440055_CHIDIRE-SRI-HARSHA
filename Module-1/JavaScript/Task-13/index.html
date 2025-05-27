@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Event Registration - Debugging</title>
+  <style>
+    .error { color: red; }
+    .success { color: green; }
+  </style>
+</head>
+<body>
+  <h1>Register for an Event</h1>
+  <form id="registrationForm">
+    <label>
+      Name:
+      <input type="text" name="name" />
+      <span class="error" id="nameError"></span>
+    </label><br /><br />
+
+    <label>
+      Email:
+      <input type="email" name="email" />
+      <span class="error" id="emailError"></span>
+    </label><br /><br />
+
+    <label>
+      Select Event:
+      <select name="event" id="eventSelect">
+        <option value="">-- Select --</option>
+        <option value="1">Music Festival</option>
+        <option value="2">Art Workshop</option>
+      </select>
+      <span class="error" id="eventError"></span>
+    </label><br /><br />
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="message"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* =========================
+   Global Reset
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Body Styling with Background
+   ========================= */
+body {
+    background: #f0f0f0; /* Fallback color */
+    background-image: url('cityscape.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Segoe UI', sans-serif;
+    color: rgba(0, 0, 0, 0.8); /* Slightly transparent black text */
+}
+
+/* =========================
+   Header Styling with HEX Color
+   ========================= */
+#mainHeader {
+    background-color: #003366; /* Deep navy HEX */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================
+   Section Header with Gradient
+   ========================= */
+.highlight h2 {
+    background: linear-gradient(to right, #0066cc, #66ccff); /* Blue gradient */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+/* =========================
+   Event Card Styling
+   ========================= */
+.eventCard {
+    background-color: rgba(255, 255, 255, 0.9); /* Light transparent white */
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

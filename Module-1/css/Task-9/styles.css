@@ -1,0 +1,55 @@
+/* Google Font */
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Bulletin Container */
+.bulletin {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.bulletin:hover {
+  transform: scale(1.01);
+}
+
+/* Bulletin Heading */
+.bulletin h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #005792;
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 10px;
+}
+
+/* Multi-Column Article Styling */
+.newsArticle {
+  column-count: 2;
+  column-gap: 40px;
+  column-rule: 1px solid #bbb;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .newsArticle {
+    column-count: 1;
+  }
+
+  .bulletin {
+    padding: 20px;
+  }
+}

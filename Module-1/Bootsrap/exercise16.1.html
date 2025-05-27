@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fixed Footer</title>
+
+  <!-- Bootstrap CSS & Icons -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #f6d365, #fda085);
+      padding-bottom: 100px;
+    }
+    .section-title {
+      text-align: center;
+      color: #2d3436;
+      margin: 2rem 0;
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+    .footer-fixed {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0.5rem;
+      z-index: 1050;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+    }
+    .footer-fixed .btn {
+      margin: 0 0.4rem;
+    }
+    .footer-icon {
+      margin-right: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="section-title">Fixed Footer </h2>
+
+    <div class="content">
+      <p>This stylish footer remains fixed at the bottom of the screen using Bootstrap's <code>position-fixed</code> and <code>bottom-0</code>. We've added vibrant colors, icons, and extra content to enable scrolling for demonstration.</p>
+      <hr />
+      <!-- Scrollable content -->
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac orci condimentum, rhoncus felis non, bibendum justo.</p>
+        <p>Aliquam nec ipsum sit amet lacus vulputate tempor. Cras facilisis ante at sapien tristique, non malesuada orci pretium.</p>
+        <p>Vivamus sit amet sapien sed metus convallis convallis sed vel velit. Sed eu malesuada nisi.</p>
+        <p>Suspendisse potenti. Sed fermentum fermentum sem, id lacinia tortor sollicitudin ac.</p>
+        <p>Sed non lacus sodales, varius diam eget, convallis sem. Fusce egestas sapien sit amet purus facilisis luctus.</p>
+        <p>Proin vitae purus a ipsum blandit tristique. Curabitur rutrum massa eget quam pretium convallis.</p>
+        <p>Nam scelerisque urna nec nunc sodales, in scelerisque eros ornare. Phasellus tincidunt elit id nunc fringilla, ac finibus quam vehicula.</p>
+        <p>Pellentesque ut turpis felis. Integer placerat augue ac mauris accumsan, nec fringilla justo suscipit.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+        <p>Praesent consequat, ligula id bibendum egestas, nulla nulla blandit sem, ac tincidunt justo purus sed mauris.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-fixed">
+    <div>
+      <span><i class="bi bi-stars footer-icon"></i>Exercise 16.1 – Fixed Footer Active</span>
+    </div>
+    <div class="mt-2">
+      <a href="exercise15.2.html" class="btn btn-outline-light btn-sm"><i class="bi bi-arrow-left-circle"></i> Back to 15.2</a>
+      <a href="exercise16.2.html" class="btn btn-warning btn-sm">Go to 16.2 <i class="bi bi-arrow-right-circle"></i></a>
+    </div>
+  </footer>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
